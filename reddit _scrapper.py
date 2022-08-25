@@ -2,11 +2,11 @@ import praw
 import matplotlib.pyplot as plt
 import pandas as pd
 #top secret data 
-reddit = praw.Reddit(client_id='SeLIOb6jTNWpTpfxnFksmw', \
-                     client_secret='_y40zXg1jWnm8zaHdUReMGm4oPxgoA', \
-                     user_agent='Comment Scrapper for Reddit', \
-                     username='froggy-b', \
-                     password='Gi0Gi01234!')
+reddit = praw.Reddit(client_id='id', \
+                     client_secret='secret', \
+                     user_agent='name of scraper', \
+                     username='username', \
+                     password='password')
 
 subredditname = "OnePiece"
 
@@ -61,27 +61,9 @@ keyCount = []
 amount = 0
 
 df = pd.DataFrame(sortedList)
-#dp = pd.DataFrame(keyCount)
+
 print('saving')
 df.to_csv('reddit_comments.csv' , index = False)
 print('done')
-#dp.to_csv('reddit_comments_count.csv' , index = False)
 
-#for entry in sortedList:
-#    keyWords.append(entry)
-#    keyCount.append(wordCount[entry])
-#    amount += 1
-#    if (amount == 10):
-#        break
-
-#labels = keyWords
-#sizes = keyCount
-# explode = (0, 0.1, 0, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
-
-#plt.title('Top comments for: r/' + subredditname)
-#plt.pie(sizes, labels=labels, autopct='%1.1f%%',
-#        shadow=True, startangle=90)
-#plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-
-#plt.show()
 
