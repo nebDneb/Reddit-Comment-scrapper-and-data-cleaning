@@ -1,0 +1,17 @@
+'I created a function for Excel through VBA that would check the special character list from one sheet and compared it to the scrapper list. It would loop through the list and replace the special characters with a space bar/blank, then it would spit the word back out cleaner. Make sure you install the MoreFunc add-in for Excel. One of the substitute function was utilized here. 
+
+Function replacer(CellRef As Range) As String
+'Named the function replacer. 
+
+Dim rng As Range, cell As Range, Result As String
+Set rng = Application.Workbooks("reddit_comments.csv").Worksheets("Sheet1").Range("A1:A495")
+Result = CellRef.Value
+For Each cell In Rng
+
+'Heres the MoreFunc fucntion that was utilized. 
+Result = Application.WorksheetFunction.Substitute(Result, cell.Value, "")
+
+Next cell
+replacer = Result
+End Function
+'This function was very powerful and Had to use the function in chunks or else Excel would crash. 
