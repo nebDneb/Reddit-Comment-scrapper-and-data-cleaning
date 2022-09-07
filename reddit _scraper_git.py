@@ -18,6 +18,9 @@ max = 100000
 print('success')
 words = []
 wordCount = {}
+
+#Here are the common words. Add to list to hace the script ignore specific words. 
+
 commonWords = {'that','this','and','of','the','for','I','it','has','in',
 'you','to','was','but','have','they','a','is','','be','on','are','an','or',
 'at','as','do','if','your','not','can','my','their','them','they','with',
@@ -28,6 +31,9 @@ commonWords = {'that','this','and','of','the','for','I','it','has','in',
 'now','what','going','been','we',"I'm",'than','any','because','We','even',
 'said','only','want','other','into','He','what','i','That','thought',
 'think',"that's",'Is','much'}
+
+#Here is where you can choose how large you want the file to be. How large of the comment forest shall the script record
+
 print('getting the forests')
 for submission in subreddit.top(time_filter = "month", limit=1000):
     submission.comments.replace_more(limit=10)
@@ -61,6 +67,8 @@ keyCount = []
 amount = 0
 
 df = pd.DataFrame(sortedList)
+
+#The script above takes a while to finish
 
 print('saving')
 df.to_csv('reddit_comments.csv' , index = False)
