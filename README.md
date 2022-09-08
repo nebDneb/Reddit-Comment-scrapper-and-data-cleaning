@@ -25,6 +25,6 @@ had the sumif function look at the name list and sum the frequency. You can also
 by color in the word cloud.
 
 Now that you have a table with the, cleaned words, frequency, and/optional boolean, you can finally start the word cloud generation in R. 
-
+https://github.com/nebDneb/Reddit-Comment-scrapper-and-data-cleaning/blob/main/generate%20image.png?raw=true
 Thanks for checking out my project!!!
 -nebDneb 
